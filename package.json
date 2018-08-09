@@ -39,7 +39,6 @@
     "jsonp": "^0.2.1",
     "lodash-es": "^4.17.10",
     "node-sass": "^4.7.2",
-    "pills": "^1.0.1",
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "spectre.css": "^0.5.3",
