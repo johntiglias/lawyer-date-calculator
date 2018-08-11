@@ -1,0 +1,14 @@
+@import "node_modules/spectre.css/src/spectre";
+
+.vdp-datepicker {
+  > div {
+    height: 100%;
+  }
+  .day__month_btn, .prev, .next, .calandar-background > div {
+    background-color: #fff;
+  }
+  .calandar-input {
+    width: 100%;
+    height: 100%;
+  }
+}

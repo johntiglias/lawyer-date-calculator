@@ -23,6 +23,10 @@ const config = {
         loader: 'raw-loader',
       },
       {
+        test: /\.scss$/,
+        loader: 'vue-style-loader!css-loader!sass-loader',
+      },
+      {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
