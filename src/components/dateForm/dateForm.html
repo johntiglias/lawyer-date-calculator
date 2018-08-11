@@ -1,8 +1,12 @@
 <div class="section centered">
+    <div class="columns col-gapless my-2">
+
   <div class='container grid-lg'>
     <div class="columns col-gapless my-2">
-      <Datepicker wrapper-class="column col-3 col-sm-12 mx-2" calendar-class="calandar-background" input-class="calandar-input" placeholder="Select Date" v-model="selectedDate"></Datepicker>
-      <select class="column col-3 col-sm-6 col-xs-12 mx-2" v-model="selected">
+      <Datepicker wrapper-class="column col-6 col-md-10 col-sm-12 centered" calendar-class="calandar-background" input-class="calandar-input" placeholder="Select Date" v-model="selectedDate"></Datepicker>
+    </div>
+    <div class="columns col-gapless my-2">
+      <select class="column col-6 col-md-10 col-sm-12 centered" v-model="selected">
         <option disabled value="">Please select one</option>
         <option>All</option>
         <option>90</option>
@@ -10,22 +14,33 @@
         <option>21</option>
         <option>Custom</option>
       </select>
-      <input class="column col-3 col-sm-6 col-xs-12 mx-2" v-model="custom" placeholder="Days" v-if="selected=='Custom'">
     </div>
     <div class="columns col-gapless my-2">
-      <button v-on:click="calculateDates" class="btn btn-primary column col-6 col-xs-12"> Calculate! </button>
+      <input class="column col-6 col-md-10 col-sm-12 centered" v-model="custom" placeholder="Days" v-if="selected=='Custom'">
     </div>
-    <div class="columns col-gapless col-oneline" v-for="date in dates">
-        <div class="column col-4">{{ date.readableActualDate }}</div>
-      <div class="text-error column col-8" v-if="date.updatedForWeekend && date.updatedForHoliday">
-        The original date {{ date.reabableCalculatedDate }} falls on a weekend and the holiday {{ date.holidayName }}.
-      </div>
-      <div class="text-error column col-8" v-if="date.updatedForWeekend && !date.updatedForHoliday">
-        The original date {{ date.reabableCalculatedDate}} falls on the weekend
-      </div>
-      <div class="text-error column col-8" v-if="!date.updatedForWeekend && date.updatedForHoliday">
-          The original date {{ date.reabableCalculatedDate }} falls on the holiday {{ date.holidayName }}.  
-      </div>
+    <div class="columns col-gapless my-2">
+      <button v-on:click="calculateDates" class="btn btn-primary column col-6 col-md-10 col-sm-12 centered"> Calculate! </button>
     </div>
   </div>
+  </div>
+    <div class="container grid-lg my-2" v-for="date in dates">
+      <div class="columns">
+        <div class="col-6 col-sm-12 col-md-10 centered ">{{ date.readableActualDate }} <br></div>
+      </div>
+      <div class="text-error columns" v-if="date.updatedForWeekend && date.updatedForHoliday">
+        <div class = 'column col-6 col-md-10 col-sm-12 centered '>
+          The original date {{ date.reabableCalculatedDate }} falls on a weekend and the holiday {{ date.holidayName }}.
+        </div>
+      </div>
+      <div class="text-error columns " v-if="date.updatedForWeekend && !date.updatedForHoliday">
+        <div class = 'column col-6 col-md-10 col-sm-12 centered '>
+          The original date {{ date.reabableCalculatedDate}} falls on the weekend
+        </div>
+      </div>
+      <div class="text-error columns" v-if="!date.updatedForWeekend && date.updatedForHoliday">
+        <div class = 'column col-6 col-md-10 col-sm-12 centered '>
+          The original date {{ date.reabableCalculatedDate }} falls on the holiday {{ date.holidayName }}.  
+        </div>
+      </div>
+    </div>
 </div>

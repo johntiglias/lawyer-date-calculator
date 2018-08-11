@@ -4,6 +4,11 @@
   > div {
     height: 100%;
   }
+  .calandar-background {
+    .day__month_btn, .month__year_btn, .prev, .next, .cell, span {
+      background-color: #fff;
+    }
+  }
   .day__month_btn, .prev, .next, .calandar-background > div {
     background-color: #fff;
   }
