@@ -107,6 +107,6 @@ const holidays = [
     name: 'Thanksgiving Day 2022',
     date: new Date('11-24-2022'),
   },
- ];
+];
 
- export default holidays;
+export default holidays;

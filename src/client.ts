@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import HomeComponent from './pages/home/home';
+import vue from 'vue';
+import home from './pages/home/home';
 
-const v = new Vue({
+const v = new vue({
   el: '#app',
   template: `
   <div>
@@ -12,6 +12,6 @@ const v = new Vue({
     title: 'Law Date Calculator',
   },
   components: {
-    HomeComponent,
+    HomeComponent: home,
   },
 });

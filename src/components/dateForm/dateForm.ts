@@ -1,22 +1,22 @@
 import { Vue, Component } from 'vue-property-decorator';
-import Datepicker from 'vuejs-datepicker';
+import vuejsDatepicker from 'vuejs-datepicker';
 import holidays from '../../data/holidays';
 
 @Component({
   template: require('./dateForm.html'),
   style: require('./dateForm.scss'),
   components:{
-    Datepicker,
+    Datepicker: vuejsDatepicker,
   },
 })
 
-export default class DateForm extends Vue {
+export default class dateForm extends Vue {
 
- custom = '';
- selected = '';
- selectedDate = null;
- dates = [];
- 
+  custom = '';
+  selected = '';
+  selectedDate = null;
+  dates = [];
+
   calculateDates() {
     this.dates = [];
     switch (this.selected){
@@ -72,10 +72,10 @@ export default class DateForm extends Vue {
       if (holiday.date.getDate() === dateObj.actualDate.getDate() &&
           holiday.date.getMonth() === dateObj.actualDate.getMonth() &&
           holiday.date.getFullYear() === dateObj.actualDate.getFullYear()) {
-            this.updateDate(dateObj, 1);
-            dateObj.name = holiday.name;
-            dateObj.updatedForHoliday = true;
-            this.checkForWeekend(dateObj);
+        this.updateDate(dateObj, 1);
+        dateObj.name = holiday.name;
+        dateObj.updatedForHoliday = true;
+        this.checkForWeekend(dateObj);
       }
     });
   }
