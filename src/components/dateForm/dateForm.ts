@@ -49,22 +49,22 @@ export default class dateForm extends Vue {
   checkForHoliday(dateObj) {
     if (dateObj.actualDate.getDate() === 1 && dateObj.actualDate.getMonth() === 0) {
       this.updateDate(dateObj, 1);
-      dateObj.name = 'New Years Day';
+      dateObj.holidayName = 'New Years Day';
       dateObj.updatedForHoliday = true;
       this.checkForWeekend(dateObj);
     } else if (dateObj.actualDate.getDate() === 4 && dateObj.actualDate.getMonth() === 6) {
       this.updateDate(dateObj, 1);
-      dateObj.name = '4th of July';
+      dateObj.holidayName = '4th of July';
       dateObj.updatedForHoliday = true;
       this.checkForWeekend(dateObj);
     } else if (dateObj.actualDate.getDate() === 11 && dateObj.actualDate.getMonth() === 10) {
       this.updateDate(dateObj, 1);
-      dateObj.name = 'Veterans Day';
+      dateObj.holidayName = 'Veterans Day';
       dateObj.updatedForHoliday = true;
       this.checkForWeekend(dateObj);
     } else if (dateObj.actualDate.getDate() === 25 && dateObj.actualDate.getMonth() === 11) {
       this.updateDate(dateObj, 1);
-      dateObj.name = 'Christmas Day';
+      dateObj.holidayName = 'Christmas Day';
       dateObj.updatedForHoliday = true;
       this.checkForWeekend(dateObj);
     }
@@ -73,7 +73,7 @@ export default class dateForm extends Vue {
           holiday.date.getMonth() === dateObj.actualDate.getMonth() &&
           holiday.date.getFullYear() === dateObj.actualDate.getFullYear()) {
         this.updateDate(dateObj, 1);
-        dateObj.name = holiday.name;
+        dateObj.holidayName = holiday.name;
         dateObj.updatedForHoliday = true;
         this.checkForWeekend(dateObj);
       }
