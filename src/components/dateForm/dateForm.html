@@ -29,12 +29,12 @@
       </div>
       <div class="text-error columns" v-if="date.updatedForWeekend && date.updatedForHoliday">
         <div class = 'column col-6 col-md-10 col-sm-12 centered '>
-          The original date was {{ date.reabableCalculatedDate }}. It falls on a weekend and the holiday {{ date.holidayName }}.
+          The original date was {{ date.reabableCalculatedDate }}. It falls on the weekend and the holiday {{ date.holidayName }}.
         </div>
       </div>
       <div class="text-error columns " v-if="date.updatedForWeekend && !date.updatedForHoliday">
         <div class = 'column col-6 col-md-10 col-sm-12 centered '>
-          The original date was {{ date.reabableCalculatedDate }}. It falls on a weekend.
+          The original date was {{ date.reabableCalculatedDate }}. It falls on the weekend.
         </div>
       </div>
       <div class="text-error columns" v-if="!date.updatedForWeekend && date.updatedForHoliday">
