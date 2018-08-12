@@ -34,7 +34,7 @@
       </div>
       <div class="text-error columns " v-if="date.updatedForWeekend && !date.updatedForHoliday">
         <div class = 'column col-6 col-md-10 col-sm-12 centered '>
-          The original date was {{ date.reabableCalculatedDate}}, and falls on the weekend
+          The original date was {{ date.reabableCalculatedDate }}. It falls on a weekend
         </div>
       </div>
       <div class="text-error columns" v-if="!date.updatedForWeekend && date.updatedForHoliday">
