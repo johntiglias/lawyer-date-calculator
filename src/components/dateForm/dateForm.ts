@@ -32,6 +32,9 @@ export default class dateForm extends Vue {
       case '60':
         this.calculateDate(60, this.selectedDate);
         break;
+      case '30':
+        this.calculateDate(30, this.selectedDate);
+        break;
       case '21':
         this.calculateDate(21, this.selectedDate);
     }
@@ -103,7 +106,7 @@ export default class dateForm extends Vue {
   }
 
   calculateAllDates(date) {
-    const allDates = [90, 60, 60, 21];
+    const allDates = [90, 60, 60, 30, 21];
     let tempDate = date;
     allDates.forEach((i) => {
       tempDate = this.calculateDate(i, tempDate);

@@ -13,13 +13,12 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js --progress",
-    "compile": "webpack --config webpack.config.prod.js",
-    "analyze": "npm run lint"
+    "compile": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "@types/lodash-es": "^4.17.0",
     "@types/node": "^9.3.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.2.2",
@@ -46,7 +45,7 @@
     "tslint": "^5.9.1",
     "tslint-config-airbnb": "^5.6.0",
     "tslint-loader": "^3.5.3",
-    "typescript": "^2.7.2",
+    "typescript": "^3.9.7",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "vue": "^2.5.13",
     "vue-class-component": "^6.1.2",
